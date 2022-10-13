@@ -53,54 +53,54 @@ def main():
         st.info("Input data below")
         st.subheader("The Most Important Features of Model:")
         #Based on our optimal features selection
-        location = st.selectbox('Location of the Auto' , (locationd))
-        First_Registration_Year = st.slider('First Registration Year' ,1980,2022,2020)     #st.number_input('First Registration Year of the Car', min_value=1940, max_value=2022, value=2000)
+#         location = st.selectbox('Location of the Auto' , (locationd))
+#         First_Registration_Year = st.slider('First Registration Year' ,1980,2022,2020)     #st.number_input('First Registration Year of the Car', min_value=1940, max_value=2022, value=2000)
         Power_kW = st.slider('Power kW', 0,220,100)
         Empty_Weight_kg = st.slider('Empty Weight (kg)', 300,5000,2000)
         mileage = st.slider('Mileage of Vehicle (km) ', 1000,300000,100000)
-        gears = st.selectbox('Gear of the Car', ('1','2','3', '4','5','6','7', '8','9'))
-        make_model = st.selectbox('Make and Model of the Auto' , (make_modeld))
-        cylinders = st.selectbox('Cylinder of the Car', ('1','2','3', '4','5','6','7', '8','9','10'))
+#         gears = st.selectbox('Gear of the Car', ('1','2','3', '4','5','6','7', '8','9'))
+#         make_model = st.selectbox('Make and Model of the Auto' , (make_modeld))
+#         cylinders = st.selectbox('Cylinder of the Car', ('1','2','3', '4','5','6','7', '8','9','10'))
         Engine_Size_cc = st.slider('Engine Size (cc)', 600,3000,1400)
-        Gearbox = st.selectbox('Gearbox', (Gearboxd))
-        fuel_type = st.selectbox('Fuel Type', (fuel_typed))
-        fuel_country = st.selectbox('Fuel Country', (fuel_countryd))
+#         Gearbox = st.selectbox('Gearbox', (Gearboxd))
+#         fuel_type = st.selectbox('Fuel Type', (fuel_typed))
+#         fuel_country = st.selectbox('Fuel Country', (fuel_countryd))
         fuel_city = st.slider('Fuel City', 0,16,10)
         fuel_comb = st.slider('Fuel Comb', 0,10,5)
         co2_emissions = st.slider('CO2 Emission per km', 0,300,90)
-        body_type = st.selectbox('Body Type', (body_typed))
-        seats = st.selectbox('Seat of the Car', ('1','2','3', '4','5','6','7', '8','9'))
-        doors = st.selectbox('Door of the Car', ('1','2','3', '4','5','6','7', '8','9'))
-        colour = st.selectbox('Colour', (colourd))
-        upholstery = st.selectbox('Upholstery', (upholsteryd))
-        drivetrain = st.selectbox('Drivetrain', (drivetraind))
+#         body_type = st.selectbox('Body Type', (body_typed))
+#         seats = st.selectbox('Seat of the Car', ('1','2','3', '4','5','6','7', '8','9'))
+#         doors = st.selectbox('Door of the Car', ('1','2','3', '4','5','6','7', '8','9'))
+#         colour = st.selectbox('Colour', (colourd))
+#         upholstery = st.selectbox('Upholstery', (upholsteryd))
+#         drivetrain = st.selectbox('Drivetrain', (drivetraind))
 
         
         
 
         
         data = {
-                'Location' : location,
-                'First Registration Year':First_Registration_Year,
+#                 'Location' : location,
+#                 'First Registration Year':First_Registration_Year,
                 'Power kW' : Power_kW,
                 'Empty Weight (kg)': Empty_Weight_kg,
                 'Mileage of Vehicle (km)': mileage,
-                'Gears': n_dictd[gears],
-                'Make Model': make_model,
-                'Cylinders': n_dictd[cylinders],
+#                 'Gears': n_dictd[gears],
+#                 'Make Model': make_model,
+#                 'Cylinders': n_dictd[cylinders],
                 'Engine Size (cc)': Engine_Size_cc,
-                'Gearbox': Gearbox,
-                'Fuel Type': fuel_type,
-                'Fuel Country' : fuel_country,
+#                 'Gearbox': Gearbox,
+#                 'Fuel Type': fuel_type,
+#                 'Fuel Country' : fuel_country,
                 'Fuel City' : fuel_city,
                 'Fuel Comb' : fuel_comb,
                 'CO2 Emissions': co2_emissions,
-                'Body Type' : body_type,
-                'Count of Seats':  n_dictd[seats],
-                'Count of Doors': n_dictd[doors],
-                'Colour': colour,
-                'Upholstery': upholstery,
-                'Drivetrain' : drivetrain
+#                 'Body Type' : body_type,
+#                 'Count of Seats':  n_dictd[seats],
+#                 'Count of Doors': n_dictd[doors],
+#                 'Colour': colour,
+#                 'Upholstery': upholstery,
+#                 'Drivetrain' : drivetrain
                 }
 
         features_df = pd.DataFrame(data.items()) #pd.DataFrame.from_dict([data])
